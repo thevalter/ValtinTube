@@ -45,4 +45,7 @@ document.querySelector('.submit').addEventListener('click', async () => {
         console.error(error);
     }
 
-})
+});
+
+document.querySelector('.clear')
+.addEventListener( 'click', () => document.querySelector('#input-field').value = "")
