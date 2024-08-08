@@ -3,11 +3,8 @@ document.querySelector('.submit').addEventListener('click', async () => {
     const videoId = document.querySelector('#input-field');
 
     function youtube_parser(url) {
-        var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        var match = url.match(regExp);
-        if (match && match[2].length == 11) {
-            return match[2];
-        }
+        let regex = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
+        return regex.exec(url)[3];
     }
 
     const url = `https://youtube-mp3-download1.p.rapidapi.com/dl?id=${youtube_parser(videoId.value)}`;
@@ -48,4 +45,4 @@ document.querySelector('.submit').addEventListener('click', async () => {
 });
 
 document.querySelector('.clear')
-.addEventListener( 'click', () => document.querySelector('#input-field').value = "")
+    .addEventListener('click', () => document.querySelector('#input-field').value = "");
