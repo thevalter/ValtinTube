@@ -1,3 +1,7 @@
+body{
+    background-color: #1e1e1e;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -16,7 +20,7 @@
 .search-field h1{
     font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
-    color: #eed813;
+    color: #268601;
 }
 
 .search-field div{
@@ -31,7 +35,9 @@
     height: 3rem;
     padding: 1rem;
     font-size: 1rem;
-    color: #1b6be4
+    color: #1b6be4;
+    background-color: transparent;
+    border: 1px solid #268601;
 }
 
 .search-field div button{
@@ -39,11 +45,12 @@
     background-color: transparent;
     border: none;
     transition: all .4s;
+    color: #268601;
 }
 
 .search-field div button:hover{
     cursor: pointer;
-    color: #eed813;
+    color: #99e47b;
     scale: 1.05;
 }
 
@@ -57,11 +64,12 @@
 
 .video p{
     font-size: 1.5rem;
+    color: #268601;
 }
 
 .video a{
     padding: .8rem 2rem;
-    background-color: #ffe609;
+    background-color: #268601;
     font-size: 1.5rem;
     border-radius: 8px;
     text-decoration: none;
@@ -71,8 +79,8 @@
 
 .video a:hover{
     background-color: transparent;
-    border: 2px solid #fde509;
-    color: #f8e009;
+    border: 2px solid #268601;
+    color: #268601;
 }
 
 .error{
